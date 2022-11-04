@@ -1,18 +1,15 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'dart:io' as html;
 
 class ProjectCards extends StatelessWidget {
   const ProjectCards({
-    //Key key,
+    Key? key,
     this.link,
     this.projectTopic,
     this.assetImage,
     this.projectDescription,
-  });
+  }) : super(key: key);
   //variables
-  final String? link;
+  final VoidCallback? link;
   final String? projectTopic;
   final String? projectDescription;
   final Widget? assetImage;
@@ -20,7 +17,11 @@ class ProjectCards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: link,
+      // onTap: () async {
+      //   // await link;
+      //   // print(link);
+      // },
       child: Container(
         width: 400,
         height: 50,
@@ -31,31 +32,10 @@ class ProjectCards extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            // Opacity(
-            //   opacity: 0.7,
-            //   child: Padding(
-            //     padding: const EdgeInsets.only(left: 10, top: 20),
-            //     child: CircleAvatar(
-            //       backgroundColor: Colors.lightBlue[200]!.withOpacity(0),
-            //       child: assetImage,
-            //       // radius: 40.0,
-            //     ),
-            //     // child: FittedBox(
-            //     //   //fit: BoxFit.fill,
-            //     //   child: assetImage,
-            //     // ),
-            //   ),
-            // ),
             Opacity(
               opacity: 0.7,
-              // child: CircleAvatar(
-              //   backgroundColor: Colors.lightBlue[200]!.withOpacity(0),
-              //   child: assetImage,
-              //   // radius: 40.0,
-              // ),
               child: Padding(
                 padding: const EdgeInsets.only(left: 10, top: 20),
-                // padding: const EdgeInsets.all(8.0),
                 child: Container(
                   child: assetImage,
                 ),
@@ -77,16 +57,13 @@ class ProjectCards extends StatelessWidget {
             ),
             Positioned(
               bottom: 10.0,
-              //right: 10.0,
-              //left: 10,
               child: Text(
                 projectDescription!,
                 style: const TextStyle(
-                  color:Colors.black87,
+                  color: Colors.black87,
                   fontSize: 15,
                   textBaseline: TextBaseline.alphabetic,
                 ),
-                // style: Theme.of(context).textTheme.caption),
               ),
             ),
           ],

@@ -1,45 +1,38 @@
 import 'package:flutter/material.dart';
 import 'package:peter_resume/screens/homepage.dart';
 import 'package:peter_resume/screens/splash.dart';
-import 'package:adaptive_theme/adaptive_theme.dart';
+//import 'package:adaptive_theme/adaptive_theme.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-///Access all contact info from a List
 void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
 
+class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return AdaptiveTheme(
-      light: ThemeData(
-        brightness: Brightness.light,
-        // primarySwatch: Colors.red,
-        // accentColor: Colors.amber,
+    return MaterialApp(
+      title: 'Peter Resume',
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      //supportedLocales: AppLocalizations.,
+      themeMode: ThemeMode.system,
+      theme: ThemeData(
+        fontFamily: "Muli",
+        primarySwatch: Colors.blue,
       ),
-      dark: ThemeData(
-        brightness: Brightness.dark,
-        //primarySwatch: Colors.red,
-        //accentColor: Colors.amber,
-      ),
-      initial: AdaptiveThemeMode.system,
-      builder: (theme, darktheme) => MaterialApp(
-        title: 'Peter Resume',
-        theme: ThemeData(
-          //scaffoldBackgroundColor: Colors.white,
-          fontFamily: "Muli",
-          primarySwatch: Colors.blue,
-        ),
-        //home: const HomePage(),
-        //home: const Splash(),
-        initialRoute: '/',
-        routes: {
-          '/': (context) => const Splash(),
-          '/second': (context) => const HomePage(),
-        },
-      ),
+
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const Splash(),
+        '/second': (context) => const HomePage(),
+      },
     );
   }
 }

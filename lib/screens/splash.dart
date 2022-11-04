@@ -1,16 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:peter_resume/screens/homepage.dart';
 import 'package:avatar_glow/avatar_glow.dart';
-// import 'package:gradient_borders/gradient_borders.dart';
-//import 'package:see_9ja_/screens/views/intro.dart';
-//import 'package:see_9ja_/utils/router.dart';
-//import 'package:see_9ja_/views/intro.dart';
 
-//App Splash Screeen displaying App Name and Logo
+//Splash Screen - DisplaysLogo
 class Splash extends StatefulWidget {
-  static String routeName =
-      "/splash"; //Static helps us to call this property without creating an instance of the object
-
   static String id = "splash_screen";
 
   const Splash({Key? key}) : super(key: key);
@@ -27,18 +20,12 @@ class _SplashState extends State<Splash> {
   }
 
   @override
-  //Splash Screen
   Widget build(BuildContext context) {
     return Scaffold(
-     // backgroundColor: const Color(0xFFede8e8),
-      // backgroundColor: Colors.black,
       body: Center(
-        child: AnimatedContainer(
-          duration: const Duration(milliseconds: 3000),
-          // tag: "profile",
+        child: Hero(
+          tag: "tag",
           child: AvatarGlow(
-            // glowColor: Colors.lightBlue,
-            // showTwoGlows: true,
             endRadius: 100.0,
             child: Container(
               height: 150,
@@ -59,7 +46,7 @@ class _SplashState extends State<Splash> {
 
   //Navigate to Resume Page
   void _navigatetointro() async {
-    await Future.delayed(const Duration(milliseconds: 1500), () {});
+    await Future.delayed(const Duration(milliseconds: 3000), () {});
 
     Navigator.pushReplacement(
       context,

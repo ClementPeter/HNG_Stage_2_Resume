@@ -3,15 +3,62 @@ import 'package:flutter/material.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:peter_resume/components/project_cards.dart';
 import 'package:peter_resume/components/social_card.dart';
-import 'dart:io' as html;
+import 'package:url_launcher/url_launcher.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-class HomePage extends StatelessWidget {
+//Main Body of the App- Displays Profile Pic,Bio, and Carousel
+class HomePage extends StatefulWidget {
   static String routeName = "/homepage";
   const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  //launch Twitter  Url
+  Future<void> _launchTwitterUrl() async {
+    var url = Uri.parse("https://twitter.com/_carlos_dev");
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $url';
+    }
+  }
+
+  //launch LinkedIn  Url
+  Future<void> _launchLinkedIn() async {
+    var url = Uri.parse("https://www.linkedin.com/in/clement-peter-b704b21a9");
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $url';
+    }
+  }
+
+  //launch Github Url
+  Future<void> _launchSoftwareUrl() async {
+    var url = Uri.parse("https://github.com/ClementPeter");
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $url';
+    }
+  }
+
+  //launch Behance Url
+  Future<void> _launchBehance() async {
+    var url = Uri.parse("https://www.behance.net/peterclementbehannce");
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $url';
+    }
+  }
+
+  //launch Hashnode Url
+  Future<void> _launchHashnode() async {
+    var url = Uri.parse("https://hashnode.com/@carlosdev");
+    if (!await launchUrl(url)) {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     // backgroundColor: const Color(0xFFede8e8),
       body: SafeArea(
         child: ListView(
           children: [
@@ -19,17 +66,12 @@ class HomePage extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                AnimatedContainer(
-                  duration: const Duration(milliseconds: 3000),
+                Hero(
+                  tag: "tag",
                   child: AvatarGlow(
                     glowColor: Colors.lightBlue,
                     showTwoGlows: true,
                     endRadius: 100.0,
-                    // child: CircleAvatar(
-                    //   radius: 100,
-                    //   backgroundImage: Image.asset('assets/images/profile.jpg'),
-                    //   child: Image.asset('assets/images/profile.jpg'),
-                    // ),
                     child: Container(
                       height: 150,
                       width: 150,
@@ -48,9 +90,9 @@ class HomePage extends StatelessWidget {
 
                 //Name
                 const SizedBox(height: 20),
-                const Text(
-                  'Clement Peter',
-                  style: TextStyle(
+                Text(
+                  AppLocalizations.of(context)!.name,
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 30.0,
                   ),
@@ -67,13 +109,12 @@ class HomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 20.0),
                 //Bio
-                const Padding(
-                  padding: EdgeInsets.only(left: 20, top: 10, right: 20),
+                Padding(
+                  padding: const EdgeInsets.only(left: 20, top: 10, right: 20),
                   child: Text(
-                    "Hey there I'm Peter and I enjoy cooking cool stuffs using cross platform solution to deliver usable products in the most efficient way possible",
+                    AppLocalizations.of(context)!.bio,
                     textAlign: TextAlign.center,
-                    style: TextStyle(
-                      //fontFamily: 'Montserrat',
+                    style: const TextStyle(
                       fontWeight: FontWeight.w300,
                       fontSize: 18.0,
                     ),
@@ -83,16 +124,16 @@ class HomePage extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SocalCard(
+                    SocialCard(
                       image: 'assets/images/twitter.png',
                       press: () {
-                        //  html.window  n('https://twitter.com/_carlos_dev', 'TWITTER');                        /// html.window                            .open("https://twitter.com/_carlos_dev", 'TWITTER');
+                        _launchTwitterUrl();
                       },
                     ),
-                    SocalCard(
+                    SocialCard(
                       image: "assets/images/linkedin.png",
                       press: () {
-                        // html.window.open(     //     "https://www.linkedin.com/in/clement-peter-b704b21a9",   //     'LINKED IN');
+                        _launchLinkedIn();
                       },
                     ),
                   ],
@@ -107,7 +148,7 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 20),
+                const SizedBox(height: 50),
                 Container(
                   height: 200,
                   decoration: const BoxDecoration(
@@ -120,6 +161,9 @@ class HomePage extends StatelessWidget {
                     children: [
                       const SizedBox(width: 10.0),
                       ProjectCards(
+                        link: () {
+                          _launchSoftwareUrl();
+                        },
                         assetImage: Row(
                           children: [
                             Image.asset(
@@ -140,32 +184,38 @@ class HomePage extends StatelessWidget {
                         ),
                         projectTopic: "Software",
                         projectDescription:
-                            "  I do enjoy cooking Mobile Apps using Flutter, Dart \n  and other 3rd party tools plus I do my best to ensure\n  they taste delicious and doesn't burn...😅😬",
+                            AppLocalizations.of(context)!.software,
                       ),
                       const SizedBox(width: 20.0),
                       ProjectCards(
+                        link: () {
+                          _launchBehance();
+                        },
                         assetImage: Image.asset(
                           'assets/images/behance.png',
                           width: 100.0,
                         ),
                         projectTopic: "Design",
                         projectDescription:
-                            " As a R3TIR3D Designer 😩,\n  I still spin up beautiful UI interfaces too 😘  ",
+                            AppLocalizations.of(context)!.design,
                       ),
                       const SizedBox(width: 20.0),
                       ProjectCards(
+                        link: () {
+                          _launchHashnode();
+                        },
                         assetImage: Image.asset(
                           'assets/images/node.png',
                           width: 100.0,
                         ),
                         projectTopic: "Blog",
-                        projectDescription:
-                            "  Plus I also write blogs to help simplify\n  technical concepts I happen to have learnt 👨🏾‍🏫",
+                        projectDescription: AppLocalizations.of(context)!.blog,
                       ),
                       const SizedBox(width: 10.0),
                     ],
                   ),
                 ),
+                const SizedBox(height: 20.0),
               ],
             ),
           ],

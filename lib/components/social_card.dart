@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 
 // import '../size_config.dart';
 
-class SocalCard extends StatelessWidget {
-  const SocalCard({
+class SocialCard extends StatelessWidget {
+  const SocialCard({
     Key? key,
     this.image,
     this.press,
