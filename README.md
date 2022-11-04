@@ -19,6 +19,7 @@
 
 - [x] System Dark Mode.
 - [x] Interactive and Respinsive UI.
+- [x] App Localization : Portuguese.
 
 
 ## 🔌 Libraires Used
@@ -27,18 +28,18 @@
 | ------------------------------------------------------- | --------------------------------------------------- |
 | [**Avatar Glow**](https://pub.dev/packages/avatar_glow)       | Glow Animation Effect                            |
 | [**Adaptive Theme**](https://pub.dev/packages/adaptive_theme)     | Automative System Light/Dark Mode Switcher    |
+| [**intl**](https://pub.dev/packages/intl)     | App Localization feature |
 
 
 ## 😫 Challenges faced 
 
-- The Codebase was modularized into various subfolders to keep the codebase organize...Various subfolders and the individual files includes :
+> Url package took me a while to implement for some unknow reason
 
-
-> Localization : Watched a Youtube video : 
+> Localization : Watched a Youtube video
 
 ## ✈ Links
 - [x] Appetize.io -  Dark Mode.
-- [x] Interactive and Respinsive UI.
+- [x] Interactive and Responsive UI.
 
 
 
