@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFede8e8),
+     // backgroundColor: const Color(0xFFede8e8),
       body: SafeArea(
         child: ListView(
           children: [

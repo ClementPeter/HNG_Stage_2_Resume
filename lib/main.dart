@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:peter_resume/screens/homepage.dart';
 import 'package:peter_resume/screens/splash.dart';
+import 'package:adaptive_theme/adaptive_theme.dart';
 
 ///Access all contact info from a List
 void main() {
@@ -12,7 +13,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return AdaptiveTheme(
+      light: ThemeData(
+        brightness: Brightness.light,
+        // primarySwatch: Colors.red,
+        // accentColor: Colors.amber,
+      ),
+      dark: ThemeData(
+        brightness: Brightness.dark,
+        //primarySwatch: Colors.red,
+        //accentColor: Colors.amber,
+      ),
+      initial: AdaptiveThemeMode.system,
+      builder: (theme, darktheme) => MaterialApp(
         title: 'Peter Resume',
         theme: ThemeData(
           //scaffoldBackgroundColor: Colors.white,
@@ -25,6 +38,8 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => const Splash(),
           '/second': (context) => const HomePage(),
-        },);
+        },
+      ),
+    );
   }
 }
