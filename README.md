@@ -47,8 +47,8 @@
 > Localization : Watched a Youtube video - https://www.youtube.com/watch?v=3HHlXBFXKFM
 
 ## ✈ Links
-- [x] Appetize.io -  
-- [x] APK File  - 
+- [x] Appetize.io -  https://appetize.io/app/efhkv64b7m3gexmeu5xdjgmmua?device=pixel4&osVersion=11.0&scale=75
+- [x] APK File  -  https://drive.google.com/drive/folders/1XvbIHYeeiPXFVw1-bYqXvDZHPohVzmCa?usp=sharing
 
 
 
