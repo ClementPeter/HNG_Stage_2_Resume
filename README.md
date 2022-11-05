@@ -4,7 +4,7 @@
 
 ## 💻 Description
 
-- A Mobile Appliaction to showcase my Resume built with flutter , this app was built as a solution to HNG STAGE 2 and has been built ; The main aim of building this is to show essential information about the developer portfolio i.e Bio, social media and what the developer can bring to the table
+- A Mobile Application to showcase my Resume built with flutter , this app was built as a solution to HNG STAGE 2 and has been built ; The main aim of building this is to show essential information about the developer portfolio i.e Bio, social media and what the developer can bring to the table
 
 
 ## 💻 Codebase Description
