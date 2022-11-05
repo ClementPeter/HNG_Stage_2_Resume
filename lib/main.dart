@@ -22,7 +22,9 @@ class _MyAppState extends State<MyApp> {
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       //supportedLocales: AppLocalizations.,
+      darkTheme: ThemeData.dark(),
       themeMode: ThemeMode.system,
+      // themeMode: ThemeMode.system,
       theme: ThemeData(
         fontFamily: "Muli",
         primarySwatch: Colors.blue,

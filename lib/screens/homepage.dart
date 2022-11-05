@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:peter_resume/components/project_cards.dart';
 import 'package:peter_resume/components/social_card.dart';
+import 'package:peter_resume/components/tool_card.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
@@ -138,17 +139,17 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 40),
                 const Center(
                   child: Text(
-                    "What I do...",
+                    "What I Offer",
                     style: TextStyle(
                       fontSize: 24,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                 ),
-                const SizedBox(height: 50),
+                const SizedBox(height: 20),
                 Container(
                   height: 200,
                   decoration: const BoxDecoration(
@@ -172,7 +173,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                             const SizedBox(width: 10.0),
                             Image.asset(
-                              'assets/images/dart.png',
+                              'assets/images/github.png',
                               width: 50.0,
                             ),
                             const SizedBox(width: 10.0),
@@ -211,11 +212,191 @@ class _HomePageState extends State<HomePage> {
                         projectTopic: "Blog",
                         projectDescription: AppLocalizations.of(context)!.blog,
                       ),
-                      const SizedBox(width: 10.0),
+                      // const SizedBox(height: 40),
+                      // const Center(
+                      //   child: Text(
+                      //     "Tools I work with",
+                      //     style: TextStyle(
+                      //       fontSize: 24,
+                      //       fontWeight: FontWeight.bold,
+                      //     ),
+                      //   ),
+                      // ),
+                      // const SizedBox(height: 10),
+                      //toolsCard(),
+                      // Row(
+                      //   crossAxisAlignment: CrossAxisAlignment.center,
+                      //   mainAxisAlignment: MainAxisAlignment.center,
+                      //   children: [
+                      //     FlatButton.icon(
+                      //       //hoverColor: Color(0XFFd1e7f9),
+                      //       icon: Padding(
+                      //         padding: EdgeInsets.only(
+                      //             left: 10.0, top: 10.0, bottom: 10.0),
+                      //         child: SizedBox(
+                      //           height: 20,
+                      //           width: 20,
+                      //           child: Image.asset("assets/image.dart.png"),
+                      //         ),
+                      //       ),
+                      //       label: Padding(
+                      //         padding: EdgeInsets.only(
+                      //             right: 10.0, top: 10.0, bottom: 10.0),
+                      //         child: Text('Dart'),
+                      //       ),
+                      //       onPressed: () {
+                      //         //html.window.open(Constants.DART, 'DART');
+                      //       },
+                      //     ),
+                      //     //SizedBox(width: 10),
+                      //     FlatButton.icon(
+                      //       //hoverColor: Color(0XFFd1e7f9),
+                      //       icon: Padding(
+                      //         padding: EdgeInsets.only(
+                      //             left: 10.0, top: 10.0, bottom: 10.0),
+                      //         child: SizedBox(
+                      //           height: 20,
+                      //           width: 20,
+                      //           child:
+                      //               Image.asset("assets/images/flutter.png"),
+                      //         ),
+                      //       ),
+                      //       label: Padding(
+                      //         padding: EdgeInsets.only(
+                      //             right: 10.0, top: 10.0, bottom: 10.0),
+                      //         child: Text(
+                      //           'Flutter',
+                      //         ),
+                      //       ),
+                      //       onPressed: () {},
+                      //     ),
+                      //     SizedBox(width: 10),
+                      //     FlatButton.icon(
+                      //       //hoverColor: Color(0XFFd1e7f9),
+                      //       icon: Padding(
+                      //         padding: EdgeInsets.only(
+                      //             left: 10.0, top: 10.0, bottom: 10.0),
+                      //         child: SizedBox(
+                      //           height: 25,
+                      //           width: 25,
+                      //           child:
+                      //               Image.asset("assets/images/firebase.png"),
+                      //         ),
+                      //       ),
+                      //       label: Padding(
+                      //         padding: EdgeInsets.only(
+                      //             right: 10.0, top: 10.0, bottom: 10.0),
+                      //         child: Text(
+                      //           'Firebase',
+                      //         ),
+                      //       ),
+                      //       onPressed: () {},
+                      //     ),
+                      //     Row(
+                      //       crossAxisAlignment: CrossAxisAlignment.center,
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: [
+                      //         ElevatedButton.icon(
+                      //           onPressed: () {
+                      //             _launchBehance();
+                      //           },
+                      //           //hoverColor: Color(0XFFd1e7f9),
+                      //           icon: Padding(
+                      //             padding: EdgeInsets.only(
+                      //                 left: 10.0, top: 10.0, bottom: 10.0),
+                      //             child: SizedBox(
+                      //               height: 20,
+                      //               width: 20,
+                      //               child: Image.asset(
+                      //                   "assets/images/github.png"),
+                      //             ),
+                      //           ),
+                      //           label: Padding(
+                      //             padding: EdgeInsets.only(
+                      //                 right: 10.0, top: 10.0, bottom: 10.0),
+                      //             child: Text('GitHub'),
+                      //           ),
+                      //         ),
+                      //       ],
+                      //     ),
+                      //     Row(
+                      //       crossAxisAlignment: CrossAxisAlignment.center,
+                      //       mainAxisAlignment: MainAxisAlignment.center,
+                      //       children: [
+                      //         FlatButton.icon(
+                      //           icon: Padding(
+                      //             padding: const EdgeInsets.only(
+                      //                 top: 10.0, bottom: 10.0),
+                      //             child: SizedBox(
+                      //               height: 22,
+                      //               width: 22,
+                      //               child: Image.asset(
+                      //                 "assets/images/figma.png",
+                      //               ),
+                      //             ),
+                      //           ),
+                      //           label: const Padding(
+                      //             padding: EdgeInsets.only(
+                      //                 right: 10.0, top: 10.0, bottom: 10.0),
+                      //             child: Text('Adobe XD'),
+                      //           ),
+                      //           onPressed: () {},
+                      //         ),
+                      //         FlatButton.icon(
+                      //             icon: Padding(
+                      //               padding: EdgeInsets.only(
+                      //                   top: 10.0, bottom: 10.0),
+                      //               child: SizedBox(
+                      //                 height: 22,
+                      //                 width: 22,
+                      //                 child:
+                      //                     Image.asset("assets/images/xd.png"),
+                      //               ),
+                      //             ),
+                      //             label: Padding(
+                      //               padding: EdgeInsets.only(
+                      //                   right: 10.0, top: 10.0, bottom: 10.0),
+                      //               child: Text('Figma'),
+                      //             ),
+                      //             onPressed: () {}),
+                      //       ],
+                      //     ),
+                      //   ],
+                      // ),
                     ],
                   ),
                 ),
-                const SizedBox(height: 20.0),
+                // const SizedBox(height: 20.0),
+                // ListView(
+                //  // scrollDirection: Axis.horizontal,
+                //   children: [
+                //     // const SizedBox(height: 40),
+                //     // const Center(
+                //     //   child: Text(
+                //     //     "Tools I work with",
+                //     //     style: TextStyle(
+                //     //       fontSize: 24,
+                //     //       fontWeight: FontWeight.bold,
+                //     //     ),
+                //     //   ),
+                //     // ),
+                //     // const SizedBox(height: 10),
+                //     // toolsCard(),
+                //      const SizedBox(height:20),
+                //   ],
+                // ),
+                const SizedBox(height: 40),
+                const Center(
+                  child: Text(
+                    "Tools I work with",
+                    style: TextStyle(
+                      fontSize: 24,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 10),
+                toolsCard(),
               ],
             ),
           ],

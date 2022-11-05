@@ -18,10 +18,6 @@ class ProjectCards extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: link,
-      // onTap: () async {
-      //   // await link;
-      //   // print(link);
-      // },
       child: Container(
         width: 400,
         height: 50,
@@ -49,7 +45,7 @@ class ProjectCards extends StatelessWidget {
               child: Text(
                 projectTopic!,
                 style: const TextStyle(
-                  color: Colors.black87,
+                  //color: Colors.black87,
                   fontSize: 30.0,
                   fontWeight: FontWeight.w600,
                 ),
@@ -59,8 +55,7 @@ class ProjectCards extends StatelessWidget {
               bottom: 10.0,
               child: Text(
                 projectDescription!,
-                style: const TextStyle(
-                  color: Colors.black87,
+                style: const TextStyle( 
                   fontSize: 15,
                   textBaseline: TextBaseline.alphabetic,
                 ),

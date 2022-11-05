@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:peter_resume/screens/homepage.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 
-//Splash Screen - DisplaysLogo
+//Splash Screen - Displays Logo
 class Splash extends StatefulWidget {
   static String id = "splash_screen";
 
