@@ -32,8 +32,8 @@
 
 | Name                                                    | Usage                                               |
 | ------------------------------------------------------- | --------------------------------------------------- |
-| [**Avatar Glow**](https://pub.dev/packages/avatar_glow)       | Glow Animation Effect                            |
-| [**Adaptive Theme**](https://pub.dev/packages/adaptive_theme)     | Automative System Light/Dark Mode Switcher    |
+| [**Avatar Glow**](https://pub.dev/packages/avatar_glow)       | For Glow Animation Effect                            |
+| [**url launcher**](https://pub.dev/packages/url_launcher)     |  For launching Socail media handles    |
 | [**intl**](https://pub.dev/packages/intl)                         | App Localization feature |
 
 
@@ -41,7 +41,7 @@
 
 > Url package took me a while to implement for some unknown reason
 
-> Localization : Watched a Youtube video
+> Localization : Watched a Youtube video - https://www.youtube.com/watch?v=3HHlXBFXKFM
 
 ## ✈ Links
 - [x] Appetize.io -  
