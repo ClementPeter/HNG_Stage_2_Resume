@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+//Structure for project card
+
 class ProjectCards extends StatelessWidget {
   const ProjectCards({
     Key? key,

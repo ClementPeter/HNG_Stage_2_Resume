@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:peter_resume/screens/homepage.dart';
 import 'package:peter_resume/screens/splash.dart';
-//import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() {
@@ -19,12 +18,10 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Peter Resume',
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
-      supportedLocales: AppLocalizations.supportedLocales,
-      //supportedLocales: AppLocalizations.,
+      localizationsDelegates: AppLocalizations.localizationsDelegates, //Needed for localization
+      supportedLocales: AppLocalizations.supportedLocales,   //Needed for localization  
       darkTheme: ThemeData.dark(),
-      themeMode: ThemeMode.system,
-      // themeMode: ThemeMode.system,
+      themeMode: ThemeMode.system,      
       theme: ThemeData(
         fontFamily: "Muli",
         primarySwatch: Colors.blue,

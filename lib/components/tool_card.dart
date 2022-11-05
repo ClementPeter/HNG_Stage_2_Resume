@@ -11,29 +11,7 @@ Widget toolsCard() {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              // ElevatedButton.icon(
-              //   //hoverColor: Color(0XFFd1e7f9),
-              //   icon: Padding(
-              //     padding:
-              //         const EdgeInsets.only(left: 10.0, top: 10.0, bottom: 10.0),
-              //     child: SizedBox(
-              //       height: 25,
-              //       width: 25,
-              //       child: Image.asset("assets/images/dart.png"),
-              //     ),
-              //   ),
-              //   label: const Padding(
-              //     padding: EdgeInsets.only(right: 10.0, top: 10.0, bottom: 10.0),
-              //     child: Text(' Dart '),
-              //   ),
-              //   onPressed: () {
-              //     null;
-              //     //html.window.open(Constants.DART, 'DART');
-              //   },
-              // ),
-              // const SizedBox(width: 20),
               ElevatedButton.icon(
-                //hoverColor: Color(0XFFd1e7f9),
                 icon: Padding(
                   padding: const EdgeInsets.only(
                       left: 10.0, top: 10.0, bottom: 10.0),
@@ -135,10 +113,8 @@ Widget toolsCard() {
               const SizedBox(width: 20),
               ElevatedButton.icon(
                 onPressed: () {
-                  //   _launchBehance();
                   null;
                 },
-                //hoverColor: Color(0XFFd1e7f9),
                 icon: Padding(
                   padding: const EdgeInsets.only(
                       left: 10.0, top: 10.0, bottom: 10.0),
@@ -157,7 +133,7 @@ Widget toolsCard() {
               const SizedBox(width: 20),
               ElevatedButton.icon(
                 onPressed: () {
-                  //   _launchBehance();
+                null;
                 },
                 icon: Padding(
                   padding: const EdgeInsets.only(

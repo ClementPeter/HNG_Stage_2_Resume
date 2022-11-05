@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-//import 'package:flutter_svg/flutter_svg.dart';//
-// import 'package:umart/size_config.dart';
 
-// import '../size_config.dart';
+//Structure for Sicial Card
 
 class SocialCard extends StatelessWidget {
   const SocialCard({
@@ -19,8 +17,8 @@ class SocialCard extends StatelessWidget {
     return GestureDetector(
       onTap: press as void Function()?,
       child: Container(
-          margin: EdgeInsets.symmetric(horizontal: 10),
-          padding: EdgeInsets.all(10),
+          margin: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.all(10),
           height: 50,
           width: 50,
           decoration: const BoxDecoration(
