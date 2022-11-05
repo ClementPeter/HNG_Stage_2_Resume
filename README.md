@@ -4,16 +4,18 @@
 
 ## 💻 Description
 
-- A Mobile Appliaction to showcase my Resume built with flutter , this app was built as a solution to HNG STAGE 2 and has been built ; The main api of building this is to show essential information about the developer portfolio i.e Bio, social media and what the developer can bring to the table
+- A Mobile Appliaction to showcase my Resume built with flutter , this app was built as a solution to HNG STAGE 2 and has been built ; The main aim of building this is to show essential information about the developer portfolio i.e Bio, social media and what the developer can bring to the table
 
 
 ## 💻 Codebase Description
 
 - The Codebase was modularized into various subfolders to keep the codebase organize...Various subfolders and the individual files includes :
 
-> screens  :homepage.dart, splash.dart : Contains Codebase for App interface
+> screens  : homepage.dart, splash.dart : Contains Codebase for App interface
 
-> components: project_cards.dart, social card.dart tool_card.dart : Contains codebase to structure custom component used through our App
+> components : project_cards.dart, social card.dart tool_card.dart : Contains codebase to structure custom component used through our App
+
+> assets : contains imaages and custom font that were used in the app
 
 > l10n : Contains the arb files used for localization
 
