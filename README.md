@@ -30,6 +30,15 @@
 - [x] App Localization : Portuguese.
 
 
+<!-- <img src="ss/mockup.png"/> -->
+
+| Light                             | Dark                              |
+| --------------------------------- | --------------------------------- |
+| 
+| <img src="![Screenshot_20221105-080948](https://user-images.githubusercontent.com/61213263/200107745-ec429003-833c-40b5-abc7-3eb11406dbe0.png)" width="400">  |
+
+
+
 ## 🔌 Libraires Used
 
 | Name                                                    | Usage                                               |
